@@ -4,8 +4,7 @@ A Flask REST API for running a mechanic shop: customers, vehicles, mechanics,
 service tickets and parts inventory, with role-scoped JWT auth for customers
 and mechanics.
 
-Built as a back-end project in the Coding Temple program. It runs locally
-against MySQL; there is no hosted deployment.
+It runs locally against MySQL; there is no hosted deployment.
 
 ## Features
 
