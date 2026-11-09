@@ -38,7 +38,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"email\": \"aldo@example.com\",\n  \"password\": \"secret123\"\n}",
+              "raw": "{\n  \"email\": \"jane.doe@example.com\",\n  \"password\": \"secret123\"\n}",
               "options": { "raw": { "language": "json" } }
             },
             "url": {
@@ -130,7 +130,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"first_name\": \"Aldo\",\n  \"last_name\": \"Herrera\",\n  \"email\": \"aldo@example.com\",\n  \"password\": \"secret123\",\n  \"phone\": \"5713565892\",\n  \"address_line1\": \"5669 S 1150 W\",\n  \"city\": \"Riverdale\",\n  \"state\": \"UT\",\n  \"postal_code\": \"84405\"\n}",
+              "raw": "{\n  \"first_name\": \"Jane\",\n  \"last_name\": \"Doe\",\n  \"email\": \"jane.doe@example.com\",\n  \"password\": \"secret123\",\n  \"phone\": \"5555550100\",\n  \"address_line1\": \"456 Oak Ave\",\n  \"city\": \"Anytown\",\n  \"state\": \"UT\",\n  \"postal_code\": \"12345\"\n}",
               "options": { "raw": { "language": "json" } }
             },
             "url": {
