@@ -5,7 +5,7 @@ prevents side effects when modules are imported.
 """
 
 from flask import Flask
-from config import config
+from config import config, REQUIRED_SETTINGS
 from app.extensions import db, ma, limiter, cache
 
 
@@ -18,6 +18,15 @@ def create_app(config_name="DevelopmentConfig"):
 
     app = Flask(__name__)
     app.config.from_object(config[config_name])
+
+    # Why: fail at startup with a clear message instead of on the first request
+    # (or, worse, signing tokens with an empty key).
+    missing = [env for key, env in REQUIRED_SETTINGS.items() if not app.config.get(key)]
+    if missing:
+        raise RuntimeError(
+            f"Missing required environment variable(s) for {config_name}: "
+            f"{', '.join(missing)}. Copy .env.example to .env and fill them in."
+        )
 
     # Why: initializing extensions here binds them to this specific app instance.
     db.init_app(app)
